@@ -26,6 +26,7 @@ body {
   color: white;
   background-color: #040A29;
   border-radius: 24px;
+  overflow: hidden;
 }
 
 .about-paragraph {
@@ -53,8 +54,8 @@ body {
   height: 70vh;
   width: 10vw;
   position: absolute;
-  top: -45vh;
-  left: -20vw;
+  top: -35vh;
+  right: 82vw;
 }
 
 .blur-element2 {
@@ -65,6 +66,26 @@ body {
   height: 70vh;
   width: 10vw;
   position: absolute;
-  top: -45vh;
-  right: -20vw;
+  top: -35vh;
+  right: -22vw;
+}
+
+.pink1 {
+  filter: blur(200px);
+}
+
+#pnk1 {
+  position: absolute;
+  left: -3vw;
+  bottom: -30vh;
+}
+
+.pink2 {
+  filter: blur(200px);
+}
+
+#pnk2 {
+  position: absolute;
+  right: -3vw;
+  top: -55vh;
 }
