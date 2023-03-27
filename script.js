@@ -1,3 +1,4 @@
+// Animation for two red blobs on both side
 gsap.from(".blur-element1", {
   duration: 1.5,
   opacity: 0
@@ -8,6 +9,7 @@ gsap.from(".blur-element2", {
   opacity: 0
 })
 
+// Animations for elements inside interior-box
 const text = document.querySelector(".about-heading");
 const letters = text.textContent.split("");
 
@@ -36,3 +38,28 @@ spans.forEach(span => {
   delay += 0.02;
 });
 
+gsap.from(".about-paragraph", {
+  y: '10vh',
+  opacity: 0,
+  duration: 1
+})
+
+// Animations for interior-box
+const twists = document.querySelectorAll('.interior-box');
+
+twists.forEach((twist) => {
+  twist.addEventListener('mousemove', function(event) {
+    const rect = this.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const angleX = (centerY - y) / centerY * 15;
+    const angleY = (centerX - x) / centerX * 15;
+    this.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(100px)`;
+  });
+
+  twist.addEventListener('mouseleave', function() {
+    this.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0)';
+  });
+});
