@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  /* height: 200vh; */
+}
+
+/* no scrollbar chrome*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    /* hidden scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+    scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* background-color: #001d67; */
+  font-family: "DM Sans";
+  color: #ffffff;
+  background-color: #000615;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 5% 0 0 0;
+  font-size: 7rem;
+  line-height: 167px;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.page {
+}
+.timeline {
+  position: absolute;
+  top: 25em;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: #000615; */
+}
+
+.container-right {
+  display: flex;
+  justify-content: flex-end;
+  transform: translateX(13em);
+}
+
+.container-left {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  transform: translateX(-9em);
+}
+
+.logo-item {
+  margin: 10px;
+}
+
+/* mobile media query */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  img {
+    transform: translateY(-60vh);
+    scale: 60%;
+  }
+}
+
+.one {
+  height: 160vh;
+  width: 15vw;
+  position: absolute;
+  top: 20vh;
+  background-color: #70262688;
+  filter: blur(150px);
+  border-radius: 500px;
+  transform: translateX(-150px);
+  /* animation to fade it in from the left */
+  animation: fadein-left 2s;
+}
+.two {
+  height: 160vh;
+  width: 15vw;
+  position: absolute;
+  right: 0;
+  top: 20vh;
+  /* transform: translateX(750%); */
+  background-color: #70262688;
+  filter: blur(150px);
+  border-radius: 500px;
+  transform: translateX(150px);
+  animation: fadein-right 2s;
+  /* transform: rotate(180deg); */
+}
+/* fadein animation keyframes */
+@keyframes fadein-left {
+  from {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-150px);
+  }
+}
+@keyframes fadein-right {
+  from {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(150px);
+  }
+}
