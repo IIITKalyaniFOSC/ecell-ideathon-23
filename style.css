@@ -16,13 +16,18 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+.main {
+  transform: translateX(-100px);
+}
+
 .one {
   height: 80vh;
   width: 15vw;
   position: absolute;
   top: 10vh;
   background-color: #70262688;
-  filter: blur(150px);
+  filter: blur(80px);
   border-radius: 500px;
   transform: translateX(-150px);
   /* animation to fade it in from the left */
@@ -36,7 +41,7 @@ body {
   top: 10vh;
   /* transform: translateX(750%); */
   background-color: #70262688;
-  filter: blur(150px);
+  filter: blur(80px);
   border-radius: 500px;
   transform: translateX(150px);
   animation: fadein-right 2s;
@@ -67,13 +72,14 @@ img {
   scale: 0.6;
 }
 h2 {
-
   font-family: "Inter";
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 400;
-  font-size: 45px;
-  
+  font-size: 2.5rem;
   color: #ffffff;
+  /* cool transfrom effect */
+  /* transform: translateX(-100px); */
+  /* animation: fadein-left 2s; */
 }
 
 h1 {
@@ -110,6 +116,12 @@ button {
   line-height: 42px;
   border: none;
   color: #000615;
+  /* blur box shadow */
+  /* transition: ease 1s; */
+}
+button:hover {
+  /* box-shadow: 0 0 20px 0 whitesmoke; */
+  /* transform: translateY(-5px); */
 }
 
 .register-button {
@@ -137,7 +149,7 @@ nav {
   height: 10vh;
   width: 100vw;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
@@ -163,6 +175,10 @@ li {
 a {
   color: whitesmoke;
   text-decoration: none;
+}
+
+a:hover {
+  color: #00afa8;
 }
 
 /* mobile media query with responsive font sizes */

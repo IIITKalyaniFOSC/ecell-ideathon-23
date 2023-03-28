@@ -13,6 +13,18 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      // render only the body background and nothing else fro 2 seconds
+      document.body.style.visibility = "hidden";
+      // sleep 2 seconds
+      setTimeout(() => {
+        document.body.style.visibility = "visible";
+      }, 2000);
+
+      // then get class one and two with query and make visible
+      document.querySelector(".one").style.visibility = "visible";
+      document.querySelector(".two").style.visibility = "visible";
+    </script>
   </head>
   <body>
     <nav class="columns">
@@ -31,7 +43,7 @@
             <a href="#">Panelists</a>
           </li>
           <li>
-            <a href="#">Timeline</a>
+            <a href="/timeline.html">Timeline</a>
           </li>
           <li>
             <a href="#">Team</a>
@@ -41,18 +53,18 @@
     </nav>
     <section class="page">
       <div class="columns is-vcentered">
-        <div class="column is-one-third is is-gapless">
+        <div class="column is-one-third is-offset-1 is is-gapless">
           <!-- ECellLogo.png -->
           <img src="img/ECellLogo.png" />
         </div>
-        <div class="column is-gapless">
+        <div class="column is-gapless main">
           <div class="column">
             <h2>Envision, IIIT Kalyani brings to you</h2>
             <h1>IDEATHON ‘23</h1>
           </div>
           <!-- <h3>“The biggest idea is to make ideas happen”</h3> -->
           <div class="column is-desktop">
-            <div class="">
+            <div>
               <!-- register here button -->
               <button class="register-button">Register Here</button>
               <!-- rules and guidelines button -->
@@ -64,5 +76,6 @@
     </section>
     <div class="one"></div>
     <div class="two"></div>
+    <script src="index.js"></script>
   </body>
 </html>
