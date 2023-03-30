@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000615;
+  overflow-x: hidden;
+}
+
+.interior-box {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 70vh;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.2vh;
+  color: white;
+  background-color: #040A29;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out;
+}
+
+.about-paragraph {
+  margin-top: 3%;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+.about-heading {
+  font-weight: 900;
+  background: linear-gradient(90deg, #00FFF0, #03C60B, red);
+  font-size: 6.6vh;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+.blur-element1 {
+  filter: blur(200px);
+}
+
+#blur-elem1 {
+  height: 70vh;
+  width: 10vw;
+  position: absolute;
+  top: -35vh;
+  right: 82vw;
+}
+
+.blur-element2 {
+  filter: blur(200px);
+}
+
+#blur-elem2 {
+  height: 70vh;
+  width: 10vw;
+  position: absolute;
+  top: -35vh;
+  right: -22vw;
+}
+
+.pink1 {
+  filter: blur(200px);
+}
+
+#pnk1 {
+  position: absolute;
+  left: -3vw;
+  bottom: -30vh;
+}
+
+.pink2 {
+  filter: blur(200px);
+}
+
+#pnk2 {
+  position: absolute;
+  right: -3vw;
+  top: -55vh;
+}
+
+@media (max-width: 576px) {
+  #pnk1 {
+    position: absolute;
+    left: -3vw;
+    bottom: -30vh;
+  }
+
+  #pnk2 {
+    position: absolute;
+    right: -3vw;
+    top: -60vh;
+  }
+
+  .about-heading {
+    font-weight: 900;
+    background: linear-gradient(90deg, #00FFF0, #03C60B);
+    font-size: 3.6vh;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .interior-box {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 70vh;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5vh;
+    color: white;
+    background-color: #040A29;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+  }
+
+  .about-paragraph {
+    margin-top: 20%;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+}
