@@ -178,4 +178,11 @@ body {
     top: 176vh
   }
 
+  #rupee1 {
+    width: 10vw;
+  }
+
+  #blur-elem1, #blur-elem2 {
+    height: 186vh;
+  }
 }
