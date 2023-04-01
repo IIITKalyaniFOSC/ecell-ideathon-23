@@ -95,23 +95,23 @@ body {
 
 @media (max-width: 576px) {
   .pink1 {
-    filter: blur(0px);
+    filter: blur(40px);
   }
 
   #pnk1 {
     position: absolute;
-    left: -3vw;
+    left: -20vw;
     bottom: -30vh;
   }
 
   .pink2 {
-    filter: blur(0px);
+    filter: blur(40px);
   }
 
   #pnk2 {
     position: absolute;
-    right: -3vw;
-    top: -60vh;
+    right: -20vw;
+    top: -69vh;
   }
 
   .about-heading {
