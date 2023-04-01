@@ -67,7 +67,7 @@ twists.forEach((twist) => {
 });
 
 // Gyroscope effect on phone
-const tiltingDiv = document.getElementById('interior-box');
+const tiltingDivs = document.getElementsByClassName('interior-box');
 
 window.addEventListener('deviceorientation', handleOrientation);
 
@@ -77,6 +77,8 @@ function handleOrientation(event) {
   const xRotation = beta ? -beta / 2 : 0;
   const yRotation = gamma ? gamma / 2 : 0;
 
-  tiltingDiv.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+  for (let i = 0; i < tiltingDivs.length; i++) {
+    tiltingDivs[i].style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+  }
 }
 
