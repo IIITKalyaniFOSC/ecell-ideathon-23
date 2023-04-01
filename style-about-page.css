@@ -94,10 +94,18 @@ body {
 }
 
 @media (max-width: 576px) {
+  .pink1 {
+    filter: blur(50px);
+  }
+
   #pnk1 {
     position: absolute;
     left: -3vw;
     bottom: -30vh;
+  }
+
+  .pink2 {
+    filter: blur(50px);
   }
 
   #pnk2 {
