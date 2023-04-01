@@ -95,7 +95,7 @@ body {
 
 @media (max-width: 576px) {
   .pink1 {
-    filter: blur(50px);
+    filter: blur(0px);
   }
 
   #pnk1 {
@@ -105,7 +105,7 @@ body {
   }
 
   .pink2 {
-    filter: blur(50px);
+    filter: blur(0px);
   }
 
   #pnk2 {
