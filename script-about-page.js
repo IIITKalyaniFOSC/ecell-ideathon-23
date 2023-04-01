@@ -45,6 +45,8 @@ gsap.from(".about-paragraph", {
 })
 
 // Animations for interior-box
+
+// Twist on hover
 const twists = document.querySelectorAll('.interior-box');
 
 twists.forEach((twist) => {
@@ -63,3 +65,19 @@ twists.forEach((twist) => {
     this.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0)';
   });
 });
+
+// Gyroscope effect on phone
+const tiltingDivs = document.getElementsByClassName('interior-box');
+
+window.addEventListener('deviceorientation', handleOrientation);
+
+function handleOrientation(event) {
+  const { beta, gamma } = event;
+
+  const xRotation = beta ? beta / 2 : 0;
+  const yRotation = gamma ? -gamma / 2 : 0;
+
+  for (let i = 0; i < tiltingDivs.length; i++) {
+    tiltingDivs[i].style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+  }
+}
