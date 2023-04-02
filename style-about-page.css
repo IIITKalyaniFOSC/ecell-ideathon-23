@@ -93,7 +93,7 @@ body {
   top: -55vh;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .pink1 {
     filter: blur(40px);
   }

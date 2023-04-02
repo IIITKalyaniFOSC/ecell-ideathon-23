@@ -82,6 +82,7 @@ body {
 .winner, .oneru, .tworu, .special {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: white;
   font-weight: normal;
   position: absolute;
@@ -144,7 +145,7 @@ body {
   margin-top: 5vh;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .boxes {
     display: flex;
     flex-direction: column;
