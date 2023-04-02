@@ -74,11 +74,11 @@ window.addEventListener('deviceorientation', handleOrientation);
 function handleOrientation(event) {
   const { beta, gamma } = event;
 
-  const xRotation = beta ? beta / 2 * 3 : 0;
-  // const yRotation = gamma ? gamma / 2 * 3: 0;
+  // const xRotation = beta ? beta / 2 * 3 : 0;
+  const yRotation = gamma ? gamma / 2 * 3: 0;
 
   for (let i = 0; i < tiltingDivs.length; i++) {
-    tiltingDivs[i].style.transform = `rotateX(${xRotation}deg)`;
+    tiltingDivs[i].style.transform = `rotateY(${yRotation}deg)`;
   }
 }
 
