@@ -1,0 +1,364 @@
+:root {
+    --level-one: translateZ(3rem);
+    --level-two: translateZ(6rem);
+    --level-three: translateZ(9rem);
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+ *{
+    font-family: 'DM Sans', sans-serif;
+}
+ *, *::before, *::after{
+    box-sizing: border-box;
+} 
+body{
+    background: #000615;
+    margin-bottom: 200px;
+    height: 100vh;
+}
+.all, .all2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+    
+}
+.card{
+    width: 100px;
+}
+.card:hover .mob-card{
+    transform: rotateY(.5turn);
+}
+.mob-card{
+    text-align: center;
+    position: relative;
+    padding: 11em 8em;
+    transition: transform 3s;
+    background: linear-gradient(to bottom,#42378F,#42378F,#42378F,#011F49,#011F49);
+    transform-style: preserve-3d;
+}
+.mob-card-front, .mob-card-back{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0em 2em;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.mob-card-front{
+    background: linear-gradient(to bottom,#42378F,#42378F,#011F49,#011F49);
+}
+.card-title-agri{
+    color: #071716;
+    font-size: 2em;
+    height: 270px;
+    transform: translateZ(2em);
+    background-image: url(agriculture.jpg);
+    background-size: cover;
+    box-shadow: 0 0 20px black ;
+    border-radius: 20px;
+}
+.card-title-ed{
+    font-size: 2em;
+    height: 270px;
+    transform: translateZ(2em);
+    background-image: url(edtech.jpg);
+    background-size: cover;
+    box-shadow: 0 0 20px black ;
+    border-radius: 20px;
+}
+.card-title-fin{
+    color: #19e3cf;
+    font-size: 2em;
+    height: 270px;
+    transform: translateZ(2em);
+    background-image: url(fintech.jpg);
+    background-size: cover;
+    box-shadow: 0 0 20px black ;
+    border-radius: 20px;
+}
+.card-title-mob{
+    color: #19e3cf;
+    font-size: 2em;
+    height: 270px;
+    transform: translateZ(2em);
+    background-image: url(mobility.jpg);
+    background-size: cover;
+    box-shadow: 0 0 20px black ;
+    border-radius: 20px;
+}
+.card-title-en{
+    color: white;
+    font-size: 2em;
+    height: 270px;
+    transform: translateZ(2em);
+    background-image: url(energy.jpg);
+    background-size: cover;
+    box-shadow: 0 0 20px black ;
+    border-radius: 20px;
+}
+.card-title-op{
+    color: white;
+    font-size: 2em;
+    height: 270px;
+    transform: translateZ(2em);
+    background-image: url(open\ innovation.jpg);
+    background-size: cover;
+    box-shadow: 0 0 20px black ;
+    border-radius: 20px;
+}
+.card-body{
+    transform: translateZ(2.5rem);
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 0.75em;
+    font-weight: 700;
+    margin-top: 25px;
+    box-shadow: 0 0 20px black;
+    box-sizing: 3px solid black;
+    border-radius: 20px;
+}
+.mob-card-back{
+    transform: rotateY(.5turn);
+    color: white;
+    background: linear-gradient(to bottom,#42378F,#42378F,#42378F,#011F49,#011F49);
+}
+.card-subtitle{
+    font-size: 12px;
+    transform: translateY(230px);
+    color: white;
+}
+.card-subtitle-op{
+    font-size: 12px;
+    transform: translateY(190px);
+    color: white;
+}
+.mob-track-title{
+    visibility: hidden;
+}
+/*---------------------------------tracks heading-------------------------------------------------*/
+#track-id{
+    margin: 10px 550px;/*590px*/
+    font-size: 100px;
+    font-weight: 5000;
+    transform: translateY(-10px);
+    font-family: sans-serif;
+    background: -webkit-linear-gradient(left,#00FFF0,#00FFF0,#03C60B,#03C60B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/*----------------------------------vectors behind the background--------------------------------------*/
+.left{
+    position: absolute;
+    float: left;
+    left: 0;
+    height: 1200px;
+    width: 160px;
+    transform: translateX(-80px);
+    margin-top: 0px;
+    filter: blur(100px);
+}
+.right{
+    position: relative;
+    float: right;
+    height: 1200px;
+    width: 160px;
+    margin-top: 0px;
+    filter: blur(90px);
+}
+.bg-up,.bg-down{
+    visibility: hidden;
+}
+@media only screen and (max-width: 400px){
+    :root {
+        --level-one: translateZ(3rem);
+        --level-two: translateZ(6rem);
+        --level-three: translateZ(9rem);
+
+        --fw-normal: 400;
+        --fw-bold: 700;
+    }
+    #track-id{
+        display: none;
+    }
+    .vector{
+        display: none;
+    }
+    .mob-tracks{
+        display: contents;
+    }
+    .mob-track-title{
+        visibility: visible;
+        background: -webkit-linear-gradient(left,#00FFF0,#00FFF0,#03C60B,#03C60B);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 90px;
+        font-weight: 5000;
+        transform: translate(5px,-35px);
+    }
+    *,*::before,*::after{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        
+    }
+    .card{
+        width: 310px;
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+    .mob-card{
+        text-align: center;
+        position: relative;
+        padding: 12rem 8rem;
+        transition: transform 3s;
+        transform-style: preserve-3d;
+    }
+    .mob-card-front , .mob-card-back{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding:2em;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        display: grid;
+    }
+    .card:hover .mob-card{
+        transform: rotateY(.5turn);
+    }
+    .mob-card-front{
+        background: linear-gradient(to bottom,#42378F,#42378F,#42378F,#011F49,#011F49);
+        color: #000615;
+        border-radius: 5px;
+    }
+    .mob-card-back::before{
+        content: '';
+        position: absolute;
+        top: 1em;
+        bottom: 1em;
+        left: 1em;
+        right: 1rem;
+        border-radius: 5px;
+        transform: var(--level-one);
+    }
+    .mob-card-front::before{
+        content: '';
+        position: absolute;
+        top: 1em;
+        bottom: 1em;
+        left: 1em;
+        right: 1rem;
+        border-radius: 5px;
+        transform: var(--level-one);
+    }
+    .mob-card-back{
+        font-size: 14px;
+        transform: rotateY(.5turn);
+        background: linear-gradient(to bottom,#42378F,#42378F,#42378F,#42378F,#011F49,#011F49);
+        border-radius: 5px;
+    } 
+    .card-title-agri{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 20px black;
+        background-image:url(agriculture.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        color: black;
+        height: 320px;
+    }
+    .card-body{
+        transform: translateZ(3rem);
+        align-content: center;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        font-weight: var(--fw-normal);
+        box-shadow: 0 0 15px black;
+        text-shadow: 0 0 15px black;
+        line-height: 1.6;
+        color: white;
+    }
+    .card-title-ed{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 20px black;
+        background-image:url(edtech.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        color: black;
+        height: 320px;
+    }
+    .card-title-fin{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 20px black;
+        background-image:url(fintech.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        color: #19e3cf;
+        height: 320px;
+    }
+    .card-title-mob{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 20px black;
+        background-image:url(mobility.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        color: #19e3cf;
+        height: 320px;
+    }
+    .card-title-en{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 20px black;
+        background-image:url(energy.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        color: black;
+        height: 320px;
+    }
+    .card-title-op{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 20px black;
+        background-image:url(open\ innovation.jpg);
+        background-size: cover;
+        border-radius: 20px;
+        color: white;
+        height: 320px;
+    }
+    .card-subtitle{
+        font-size: 12px;
+        transform: translateY(275px);
+        color: white;
+    }
+    .card-subtitle-op{
+        font-size: 12px;
+        transform: translateY(220px);
+    }
+    .all, .all2{
+        display: block;
+    }
+}
