@@ -19,8 +19,6 @@
     width: 112.5rem;
 
     background-size: cover;
-    position: fixed;
-    bottom: 0;
   }
   .red-image{
     visibility: visible;
@@ -32,7 +30,7 @@
     margin: 0rem;
     padding: 0rem;
     height: 25.5rem;
-    width: 13.75rem;
+    width: 20.75rem;
     position: absolute;
     
     right: 0rem;
@@ -116,6 +114,11 @@
     padding: 0.6rem 0;
     
   }
+  .logo{
+    margin-right: 10rem;
+    width:20rem;
+    height: 18rem;
+  }
   
   /* Responsive adjustments */
   
@@ -154,6 +157,7 @@
     }
     .logo{
       width: 9rem;
+      
     }
     .horizontal-line{
       margin-top: 1.5rem;
