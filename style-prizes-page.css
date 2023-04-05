@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
+.full-prizes-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +37,7 @@ body {
 
 .prizes-heading {
   position: absolute;
-  top: 9vh;
+  top: 214vh;
   font-weight: 900;
   font-size: 7.9vh;
   background: linear-gradient(90deg, #00FFF0, #03C60B);

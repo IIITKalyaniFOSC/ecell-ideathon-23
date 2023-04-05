@@ -13,6 +13,8 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-about-page.css">
+    <link rel="stylesheet" href="style-prizes-page.css">
     <script>
       // render only the body background and nothing else fro 2 seconds
       document.body.style.visibility = "hidden";
@@ -27,55 +29,150 @@
     </script>
   </head>
   <body>
-    <nav class="columns">
-      <div class="column is-vcentered">
-        <ol>
-          <li>
-            <a href="#">About The Event</a>
-          </li>
-          <li>
-            <a href="#">Tracks</a>
-          </li>
-          <li>
-            <a href="#">Prizes</a>
-          </li>
-          <li>
-            <a href="#">Panelists</a>
-          </li>
-          <li>
-            <a href="/timeline.html">Timeline</a>
-          </li>
-          <li>
-            <a href="#">Team</a>
-          </li>
-        </ol>
-      </div>
-    </nav>
-    <section class="page">
-      <div class="columns is-vcentered">
-        <div class="column is-one-third is-offset-1 is is-gapless">
-          <!-- ECellLogo.png -->
-          <img src="img/ECellLogo.png" />
+    <div class="full-landing-page">
+      <nav class="columns">
+        <div class="column is-vcentered">
+          <ol>
+            <li>
+              <a href="#">About The Event</a>
+            </li>
+            <li>
+              <a href="#">Tracks</a>
+            </li>
+            <li>
+              <a href="#">Prizes</a>
+            </li>
+            <li>
+              <a href="#">Panelists</a>
+            </li>
+            <li>
+              <a href="timeline.html">Timeline</a>
+            </li>
+            <li>
+              <a href="#">Team</a>
+            </li>
+          </ol>
         </div>
-        <div class="column is-gapless main">
-          <div class="column">
-            <h2>Envision, IIIT Kalyani brings to you</h2>
-            <h1>IDEATHON ‘23</h1>
+      </nav>
+      <section class="page">
+        <div class="columns is-vcentered">
+          <div class="column is-one-third is-offset-1 is is-gapless">
+            <!-- ECellLogo.png -->
+            <img id="ecell-logo" src="img/ECellLogo.png" />
           </div>
-          <!-- <h3>“The biggest idea is to make ideas happen”</h3> -->
-          <div class="column is-desktop">
-            <div>
-              <!-- register here button -->
-              <button class="register-button">Register Here</button>
-              <!-- rules and guidelines button -->
-              <button class="rules-button">Rules and Guidelines</button>
+          <div class="column is-gapless main">
+            <div class="column">
+              <h2>Envision, IIIT Kalyani brings to you</h2>
+              <h1>IDEATHON ‘23</h1>
+            </div>
+            <!-- <h3>“The biggest idea is to make ideas happen”</h3> -->
+            <div class="column is-desktop">
+              <div>
+                <!-- register here button -->
+                <button class="register-button">Register Here</button>
+                <!-- rules and guidelines button -->
+                <button class="rules-button">Rules and Guidelines</button>
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <div class="one"></div>
+      <div class="two"></div>
+    </div>
+    <div class="full-about-page">
+      <div class="interior-box">
+        <div class="about-heading">
+          <p>About the Event</p>
+        </div>  
+
+        <div class="about-paragraph">
+          <p>Ideathon '23 by Envision, IIIT Kalyani is an effort to nudge candidates to come up with innovative solutions to some of the most imperative challenges of our time. Participants work across various majors are encouraged to form a team and use design thinking and innovative learning practices to ideate and collaborate on possible solutions. There are various tracks which are elaborated in detail below.</p>
+        </div>
+
+        <div class="pink1">
+          <img id="pnk1" src="img/Screenshot 2023-03-26 at 19-24-13 color picker - Google Search.png" alt="pink">
+        </div>
+
+        <div class="pink2">
+          <img id="pnk2" src="img/Screenshot 2023-03-26 at 19-24-13 color picker - Google Search.png" alt="pink">
+        </div>
       </div>
-    </section>
-    <div class="one"></div>
-    <div class="two"></div>
+
+      <div class="blur-element1">
+        <img id="blur-elem1" src="img/702626.png" alt="blur-image">
+      </div>
+
+      <div class="blur-element2">
+        <img id="blur-elem2" src="img/702626.png" alt="blur-image">
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    </div>
+    <div class="full-prizes-page">
+      <div class="prizes-heading">
+        <p>Prizes</p>
+      </div>
+
+      <div class="boxes">
+        <div class="first-box" translate="none">
+          <p id="win">Winner</p>
+
+          <img id="trophy" src="img/trophy-material-7-svgrepo-com.svg" alt="trophy">
+
+          <div class="winner">
+            <img id="rupee1" src="img/rupee-svgrepo-com(1).svg" alt="rupee-symbol">
+            <p>8000</p>
+          </div>
+        </div>
+
+        <div class="second-box">
+          <p id="win1ru">1st Runner Up</p>
+
+          <img id="trophy" src="img/trophy-material-7-svgrepo-com.svg" alt="trophy">
+
+          <div class="oneru">
+            <img id="rupee1" src="img/rupee-svgrepo-com(1).svg" alt="rupee-symbol">
+            <p>5000</p>
+          </div>
+        </div>
+
+        <div class="third-box">
+          <p id="win2ru">2nd Runner Up</p>
+
+          <img id="trophy" src="img/trophy-material-7-svgrepo-com.svg" alt="trophy">
+
+          <div class="tworu">
+            <img id="rupee1" src="img/rupee-svgrepo-com(1).svg" alt="rupee-symbol">
+            <p>4000</p>
+          </div>
+        </div>
+
+        <div class="fourth-box">
+          <p id="win">Special</p>
+
+          <img id="trophy" src="img/trophy-material-7-svgrepo-com.svg" alt="trophy">
+
+          <div class="special">
+            <img id="rupee1" src="img/rupee-svgrepo-com(1).svg" alt="rupee-symbol">
+            <p>3000</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="blur-element1">
+        <img id="blur-elem1" src="702626.png" alt="blur-image">
+      </div>
+
+      <div class="blur-element2">
+        <img id="blur-elem2" src="702626.png" alt="blur-image">
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    </div>
     <script src="index.js"></script>
+    <script src="script-about-page.js"></script>
+    <script src="script-prizes-page.js"></script>
   </body>
 </html>
