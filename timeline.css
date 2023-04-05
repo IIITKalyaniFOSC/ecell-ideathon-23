@@ -1,65 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-section {
-  /* height: 200vh; */
-}
-
-/* no scrollbar chrome*/
-::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-    /* hidden scrollbar */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    
-    scroll-behavior: smooth;
-  overflow-x: hidden;
-  /* background-color: #001d67; */
+#timeline {
   font-family: "DM Sans";
   color: #ffffff;
   background-color: #000615;
-}
-
-.heading {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-h1 {
+.timeline-heading {
   margin: 5% 0 0 0;
   font-size: 7rem;
   line-height: 167px;
 }
 
-h2 {
+.timeline-date {
   font-size: 3rem;
   font-weight: bold;
   margin: 0;
 }
 
-h3 {
+.timeline-event {
   font-size: 2rem;
-  text-align: left;
+  width: 400px;
 }
 
-.page {
-}
-.timeline {
+.timeline-items {
   position: absolute;
-  top: 25em;
+  top: 27.5em;
 }
 
 .container {
   position: relative;
   width: 100%;
-  height: 13em;
+  /* margin: 10em 0 10em 0; */
+  margin-bottom: 5.2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,34 +45,83 @@ h3 {
   display: flex;
   justify-content: flex-end;
   transform: translateX(13em);
+  animation: fadein-right-timeline 2s ease;
 }
 
 .container-left {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  transform: translateX(-9em);
+  text-align: right;
+  transform: translateX(-12em);
+  animation: fadein-left-timeline 2s ease;
+}
+.container-left text h2 {
+  text-align: right;
+}
+
+@keyframes fadein-left-timeline {
+  0% {
+    opacity: 0;
+    transform: translateX(-20em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-12em);
+  }
+}
+@keyframes fadein-right-timeline {
+  from {
+    opacity: 0;
+    transform: translateX(20em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(13em);
+  }
 }
 
 .logo-item {
   margin: 10px;
+  width: 4rem;
+}
+
+.info {
+  width: 3.5rem;
+}
+.form {
+  width: 5rem;
+}
+.idea {
+  width: 3rem;
 }
 
 /* mobile media query */
 @media screen and (max-width: 768px) {
-  h1 {
+  .timeline-heading {
     font-size: 4em;
+    margin: 0;
+    height: auto;
   }
 
-  h2 {
-    font-size: 2em;
-  }
-  h3 {
+  .timeline-date {
     font-size: 1.5em;
   }
-  img {
-    transform: translateY(-60vh);
-    scale: 60%;
+  .timeline-event {
+    font-size: 1em;
+  }
+  .line-svg {
+    width: 18rem;
+    min-height: 200vh;
+  }
+  .logo-item {
+    width: 2rem;
+  }
+  .container-right {
+    transform: translateX(0);
+  }
+  .container-left {
+    transform: translateX(0);
   }
 }
 
