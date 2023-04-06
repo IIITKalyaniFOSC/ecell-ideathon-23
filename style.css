@@ -96,7 +96,9 @@ button {
   height: 4.5rem;
   margin: 1.25rem;
   padding: 0 5rem 0 5rem;
-  background: linear-gradient(90deg, #00afa8 1.56%, #00865a 100%);
+  /* background: linear-gradient(90deg, #00afa8 1.56%, #00865a 100%); */
+  background: linear-gradient(90deg, var(--c1, #00afa8), var(--c2, #00865a) 51%, var(--c1, #00afa8)) var(--x, 0)/ 200%;
+  transition: 0.5s;
   border-radius: 16px;
   font-family: "Inter";
   font-style: normal;
@@ -106,8 +108,13 @@ button {
   color: #000615;
 }
 
+button:hover {
+  --x: 100%; 
+  font-size: 2.25rem;
+}
 .rules-button {
-  background: linear-gradient(90deg, #01a26d 0%, #046a16 100%);
+  /* background: linear-gradient(90deg, #01a26d 0%, #046a16 100%); */
+  background: linear-gradient(90deg, var(--c1, #01a26d), var(--c2, #046a16) 51%, var(--c1, #01a26d)) var(--x, 0)/ 200%;
 }
 
 .column {
