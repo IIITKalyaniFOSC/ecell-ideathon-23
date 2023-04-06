@@ -35,5 +35,15 @@ document.addEventListener('mousemove', (e) => {
     h2.style.transform = `skewX(${y}deg)`;
 });
 
+// if on desktop remove mobile-vector-top and mobile-vector-bottom else remove main-vector-left and main-vector-right
+if (window.innerWidth > 768) {
+    document.querySelector(".mobile-vector-top").remove();
+    document.querySelector(".mobile-vector-bottom").remove();
+}
+else {
+    document.querySelector(".main-vector-left").remove();
+    document.querySelector(".main-vector-right").remove();
+}
+
 // added this to index.js as this is being used by everyone
 AOS.init()

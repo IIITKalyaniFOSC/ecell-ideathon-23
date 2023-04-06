@@ -43,6 +43,28 @@ body {
   transform: translateX(150px);
   animation: fadein-right 2s;
 }
+.mobile-vector-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5vh;
+  width: 100vw;
+  background-color: #702626;
+  filter: blur(80px);
+  border-radius: 0 0 500px 500px;
+  animation: fadein-top 2s;
+}
+.mobile-vector-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 10vh;
+  width: 100vw;
+  background-color: #70262688;
+  filter: blur(80px);
+  border-radius: 500px 500px 0 0;
+  animation: fadein-bottom 2s;
+}
 
 /* fadein animation keyframes */
 @keyframes fadein-left {
@@ -63,6 +85,26 @@ body {
   to {
     opacity: 1;
     transform: translateX(150px);
+  }
+}
+@keyframes fadein-top {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadein-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -98,7 +140,7 @@ button {
   padding: 0 5rem 0 5rem;
   /* background: linear-gradient(90deg, #00afa8 1.56%, #00865a 100%); */
   background: linear-gradient(90deg, var(--c1, #00afa8), var(--c2, #00865a) 51%, var(--c1, #00afa8)) var(--x, 0)/ 200%;
-  transition: 0.5s;
+  transition: 0.5s ease;
   border-radius: 16px;
   font-family: "Inter";
   font-style: normal;
@@ -110,7 +152,7 @@ button {
 
 button:hover {
   --x: 100%; 
-  font-size: 2.25rem;
+  padding: 0 6rem 0 6rem;
 }
 .rules-button {
   /* background: linear-gradient(90deg, #01a26d 0%, #046a16 100%); */
@@ -199,6 +241,7 @@ nav {
   #ecell-logo {
     height: 20rem;
     margin-top: 2rem;
+    transform: translateY(3rem);
   }
   .logo-container {
     padding: 0;
@@ -219,10 +262,21 @@ nav {
     padding: 0 2rem 0 2rem;
     margin: 1rem;
   }
-  .buttons-mobile {
+  button:hover {
+    padding: 0 3rem 0 3rem;
+    color: transparent;
+  }
+  .buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* transform: translateY(-1.5rem); */
+  }
+  .register-button {
+    padding: 0 3.0rem 0 3.0rem;;
+  }
+  .rules-button:hover {
+    padding: 0 2rem 0 2rem;
   }
   nav {
     display: none;
