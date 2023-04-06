@@ -1,15 +1,7 @@
-// Animation for two red blobs on both side
-gsap.from(".blur-element1", {
-  duration: 1.5,
-  opacity: 0
-})
-
-gsap.from(".blur-element2", {
-  duration: 1.5,
-  opacity: 0
-})
-
 // Animations for elements inside interior-box
+
+gsap.registerPlugin(ScrollTrigger);
+
 const text = document.querySelector(".about-heading");
 const letters = text.textContent.split("");
 
@@ -29,6 +21,7 @@ spans.forEach(span => {
 let delay = 0;
 spans.forEach(span => {
   gsap.to(span, {
+    scrollTrigger: span,
     duration: 1,
     delay: delay,
     opacity: 1,
@@ -39,6 +32,7 @@ spans.forEach(span => {
 });
 
 gsap.from(".about-paragraph", {
+  scrollTrigger: ".about-paragraph",
   y: '10vh',
   opacity: 0,
   duration: 1

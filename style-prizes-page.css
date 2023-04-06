@@ -11,30 +11,6 @@
   overflow-x: hidden;
 }
 
-.blur-element1 {
-  filter: blur(100px);
-}
-
-#blur-elem1 {
-  height: 70vh;
-  width: 10vw;
-  position: absolute;
-  top: -70vh;
-  right: 47vw;
-}
-
-.blur-element2 {
-  filter: blur(100px);
-}
-
-#blur-elem2 {
-  height: 70vh;
-  width: 10vw;
-  position: absolute;
-  top: -70vh;
-  left: 47vw;
-}
-
 .prizes-heading {
   position: absolute;
   top: 214vh;

@@ -1,16 +1,6 @@
-// Animation for two red blobs on both side
-gsap.from(".blur-element1", {
-  duration: 1.5,
-  opacity: 0
-})
-
-gsap.from(".blur-element2", {
-  duration: 1.5,
-  opacity: 0
-})
-
 // Prizes animation
 gsap.from(".prizes-heading", {
+  scrollTrigger: ".prizes-heading",
   duration: 1,
   opacity: 0,
   y: '2vw'
@@ -18,6 +8,7 @@ gsap.from(".prizes-heading", {
 
 // Boxes animation
 gsap.from(".first-box", {
+  scrollTrigger: ".first-box",
   duration: 2,
   opacity: 0,
   ease: "back.out(10)",
@@ -25,6 +16,7 @@ gsap.from(".first-box", {
 })
 
 gsap.from(".second-box", {
+  scrollTrigger: ".second-box",
   duration: 2,
   opacity: 0,
   ease: "back.out(10)",
@@ -33,6 +25,7 @@ gsap.from(".second-box", {
 })
 
 gsap.from(".third-box", {
+  scrollTrigger: ".third-box",
   duration: 2,
   opacity: 0,
   ease: "back.out(10)",
@@ -41,6 +34,7 @@ gsap.from(".third-box", {
 })
 
 gsap.from(".fourth-box", {
+  scrollTrigger: ".fourth-box",
   duration: 2,
   opacity: 0,
   ease: "back.out(10)",

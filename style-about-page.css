@@ -44,30 +44,6 @@
   padding-right: 7vw;
 }
 
-.blur-element1 {
-  filter: blur(100px);
-}
-
-#blur-elem1 {
-  height: 70vh;
-  width: 10vw;
-  position: absolute;
-  top: -35vh;
-  right: 82vw;
-}
-
-.blur-element2 {
-  filter: blur(100px);
-}
-
-#blur-elem2 {
-  height: 70vh;
-  width: 10vw;
-  position: absolute;
-  top: -35vh;
-  right: -22vw;
-}
-
 .pink1 {
   filter: blur(100px);
 }
