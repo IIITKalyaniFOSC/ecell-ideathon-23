@@ -1,4 +1,5 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,7 +8,10 @@ body {
   overflow-x: hidden;
   /* background-color: #001d67; */
   background-color: #000615;
-
+}
+.full-landing-page {
+  height: 100vh;
+  width: 100vw;
 }
 .page {
   display: flex;
@@ -24,7 +28,7 @@ body {
 .one {
   height: 80vh;
   width: 15vw;
-  position: absolute;
+  position: fixed;
   top: 10vh;
   background-color: #70262688;
   filter: blur(80px);
@@ -36,7 +40,7 @@ body {
 .two {
   height: 80vh;
   width: 15vw;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 10vh;
   /* transform: translateX(750%); */
@@ -68,7 +72,7 @@ body {
     transform: translateX(150px);
   }
 }
-img {
+#ecell-logo {
   scale: 0.6;
 }
 h2 {
@@ -208,5 +212,10 @@ a:hover {
   }
   .li {
     font-size: 4vw;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
   }
 }
