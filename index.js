@@ -5,7 +5,6 @@ document.querySelector("nav").style.visibility = "hidden";
 document.querySelector("section").style.opacity = "0";
 document.querySelector("nav").style.opacity = "0";
 
-
 // sleep 2 seconds
 setTimeout(() => {
     // document.body.style.visibility = "visible";

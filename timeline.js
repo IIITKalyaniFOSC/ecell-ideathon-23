@@ -1,0 +1,138 @@
+document.write(`
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ideathon</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter&family=K2D&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="timeline.css" />
+    \
+  </head>
+  <body>
+    <section id="timeline">
+      <h1 class="timeline-heading">Timeline</h1>
+      <img class="line-svg" src="img/line.svg" />
+      <div class="timeline-items">
+        <div class="container">
+          <div data-aos="fade-right">
+          <div class="container-right">
+            <img class="logo-item" src="img/announce.svg" />
+            <div class="text">
+              <h2 class="timeline-date">February 16 2022</h2>
+              <h3 class="timeline-event">Announcement</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-box"></div>
+        <div class="container">
+          <div data-aos="fade-left">
+          <div class="container-left">
+            <img class="logo-item info" src="img/info.svg" />
+            <div class="text">
+              <h2 class="timeline-date">February 16 2022</h2>
+              <h3 class="timeline-event">
+                Introduction to Envision and Ideathon Session
+              </h3>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-box"></div>
+        <div class="container">
+          <div data-aos="fade-right">
+          <div class="container-right">
+            <img class="logo-item form" src="img/form.svg" />
+            <div class="text">
+              <h2 class="timeline-date">February 16 2022</h2>
+              <h3 class="timeline-event">Form Filling</h3>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="space-box"></div>
+        <div class="container">
+          <div data-aos="fade-left">
+          <div class="container-left">
+            <img class="logo-item" src="img/announce.svg" />
+            <div class="text">
+              <h2 class="timeline-date">February 16 2022</h2>
+              <h3 class="timeline-event">Announcing shortlisted candidates</h3>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="space-box"></div>
+        <div class="container">
+          <div data-aos="fade-right">
+          <div class="container-right">
+            <img class="logo-item idea" src="img/idea.svg" />
+            <div class="text">
+              <h2 class="timeline-date">February 16 2022</h2>
+              <h3 class="timeline-event">Main Event</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-box"></div>
+        <div class="container">
+          <div data-aos="fade-left">
+          <div class="container-left">
+            <img class="logo-item" src="img/announce.svg" />
+            <div class="text">
+              <h2 class="timeline-date">February 16 2022</h2>
+              <h3 class="timeline-event">
+                Announcing shortlisted presentations
+              </h3>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-box"></div>
+        <div class="container">
+          <div data-aos="fade-right">
+            <div class="container-right">
+              <img class="logo-item" src="img/judge.svg" />
+              <div class="text">
+                <h2 class="timeline-date">February 16 2022</h2>
+                <h3 class="timeline-event">Panelists round</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-box"></div>
+        <div class="container">
+          <div data-aos="fade-left">
+            <div class="container-left">
+              <img class="logo-item" src="img/prize.svg" />
+              <div class="text">
+                <h2 class="timeline-date">February 16 2022</h2>
+                <h3 class="timeline-event">Winner announcement</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="main-vector-right"></div>
+    <div class="main-vector-left"></div> -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
+
+
+`);
