@@ -4,24 +4,23 @@
   box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;
-  /* background-color: #001d67; */
   background-color: #000615;
-
 }
-.page {
+#landing {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   height: 100vh;
   width: 100vw;
 }
-
+.landing {
+  animation: fadein 2s 2s;
+  transform: translateX(-75px);
+}
 .main {
   transform: translateX(-100px);
 }
 
-.one {
+/* red shades on the sides */
+.main-vector-left {
   height: 80vh;
   width: 15vw;
   position: absolute;
@@ -30,23 +29,43 @@ body {
   filter: blur(80px);
   border-radius: 500px;
   transform: translateX(-150px);
-  /* animation to fade it in from the left */
   animation: fadein-left 2s;
 }
-.two {
+.main-vector-right {
   height: 80vh;
   width: 15vw;
   position: absolute;
   right: 0;
   top: 10vh;
-  /* transform: translateX(750%); */
   background-color: #70262688;
   filter: blur(80px);
   border-radius: 500px;
   transform: translateX(150px);
   animation: fadein-right 2s;
-  /* transform: rotate(180deg); */
 }
+.mobile-vector-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5vh;
+  width: 100vw;
+  background-color: #702626;
+  filter: blur(80px);
+  border-radius: 0 0 500px 500px;
+  animation: fadein-top 2s;
+}
+.mobile-vector-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 10vh;
+  width: 100vw;
+  background-color: #70262688;
+  filter: blur(80px);
+  border-radius: 500px 500px 0 0;
+  animation: fadein-bottom 2s;
+}
+
 /* fadein animation keyframes */
 @keyframes fadein-left {
   from {
@@ -68,29 +87,43 @@ body {
     transform: translateX(150px);
   }
 }
-img {
+@keyframes fadein-top {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadein-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#ecell-logo {
   scale: 0.6;
 }
-h2 {
+.main-sub-heading {
   font-family: "Inter";
-  /* font-style: italic; */
   font-weight: 400;
   font-size: 2.5rem;
   color: #ffffff;
-  /* cool transfrom effect */
-  /* transform: translateX(-100px); */
-  /* animation: fadein-left 2s; */
 }
 
-h1 {
-  
+.main-heading {  
   font-family: "K2D";
   font-style: normal;
   font-weight: 700;
   font-size: 9rem;
-  line-height: 169px;
   text-align: center;
-  
   background: linear-gradient(
     90deg,
     rgba(0, 255, 240, 0.75) 24.48%,
@@ -102,37 +135,28 @@ h1 {
 }
 
 button {
-  width: 375px;
-  height: 74px;
-  margin: 20px;
-  background: linear-gradient(90deg, #00afa8 1.56%, #00865a 100%);
-  /* border: 2px solid rgba(255, 255, 255, 0.25); */
+  height: 4.5rem;
+  margin: 1.25rem;
+  padding: 0 5rem 0 5rem;
+  /* background: linear-gradient(90deg, #00afa8 1.56%, #00865a 100%); */
+  background: linear-gradient(90deg, var(--c1, #00afa8), var(--c2, #00865a) 51%, var(--c1, #00afa8)) var(--x, 0)/ 200%;
+  transition: 0.5s ease;
   border-radius: 16px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  font-size: 35px;
-  font-size: 2vw;
-  line-height: 42px;
+  font-size: 2rem;
   border: none;
   color: #000615;
-  /* blur box shadow */
-  /* transition: ease 1s; */
 }
+
 button:hover {
-  /* box-shadow: 0 0 20px 0 whitesmoke; */
-  /* transform: translateY(-5px); */
+  --x: 100%; 
+  padding: 0 6rem 0 6rem;
 }
-
-.register-button {
-  width: 20vw;
-  height: 8vh;
-}
-
 .rules-button {
-  background: linear-gradient(90deg, #01a26d 0%, #046a16 100%);
-  width: 26vw;
-  height: 8vh;
+  /* background: linear-gradient(90deg, #01a26d 0%, #046a16 100%); */
+  background: linear-gradient(90deg, var(--c1, #01a26d), var(--c2, #046a16) 51%, var(--c1, #01a26d)) var(--x, 0)/ 200%;
 }
 
 .column {
@@ -149,13 +173,14 @@ nav {
   height: 10vh;
   width: 100vw;
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  animation: pop-down 2s cubic-bezier(0.075, 0.82, 0.165, 1) 2s ;
 }
 
-ol {
+.nav-list {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -166,47 +191,94 @@ ol {
   margin-top: 100px;
 }
 
-li {
+.nav-list-item {
   text-decoration: none;
   font-size: 30px;
   line-height: 36px;
 }
 
-a {
+.nav-link {
   color: whitesmoke;
   text-decoration: none;
 }
 
-a:hover {
+.nav-link:hover {
   color: #00afa8;
+}
+
+/* animations on loading of the landing page */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pop-down {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* mobile media query with responsive font sizes */
 @media screen and (max-width: 768px) {
-  h1 {
-    font-size: 6rem;
-    line-height: 169px;
+  .main-vector-left, .main-vector-right {
+    display: none;
   }
-  h2 {
-    font-size: 30px;
+  #landing {
+    /* this centers everything idk how */
+    display: block;
+  }
+  .landing, .main {
+    transform: translateX(0);
+    max-width: 100vw;
+    margin: 0;
+  }
+  #ecell-logo {
+    height: 20rem;
+    margin-top: 2rem;
+    transform: translateY(3rem);
+  }
+  .logo-container {
+    padding: 0;
+    margin: 0;
+  }
+  .main-heading {
+    font-size: 3rem;
+  }
+  .main-sub-heading {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
   }
   button {
-    width: 80vw;
-    height: 10vh;
-    font-size: 4vw;
+    height: 3rem;
+    /* width: 20rem; */
+    font-size: 1.25rem;
+    font-style: bold;
+    padding: 0 2rem 0 2rem;
+    margin: 1rem;
+  }
+  button:hover {
+    padding: 0 3rem 0 3rem;
+    color: transparent;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* transform: translateY(-1.5rem); */
   }
   .register-button {
-    width: 80vw;
-    height: 10vh;
+    padding: 0 3.0rem 0 3.0rem;;
   }
-  .rules-button {
-    width: 80vw;
-    height: 10vh;
+  .rules-button:hover {
+    padding: 0 2rem 0 2rem;
   }
   nav {
     display: none;
-  }
-  .li {
-    font-size: 4vw;
   }
 }
