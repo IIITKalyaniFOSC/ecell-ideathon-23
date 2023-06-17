@@ -1,0 +1,380 @@
+:root {
+    --level-one: translateZ(3rem);
+    --level-two: translateZ(6rem);
+    --level-three: translateZ(9rem);
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+ *{
+    font-family: 'DM Sans', sans-serif;
+}
+ *, *::before, *::after{
+    box-sizing: border-box;
+} 
+body{
+    background: #000615;
+    height: 100vh;
+}
+/* ------------------------------------------------------------- STYLING CARDS ------------------------------------------------------------ */
+.all, .all2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.card{
+    width: 6.25rem;
+    cursor: pointer;
+}
+.is-flipped{
+    transform: rotateY(.5turn);
+}
+.mob-card{
+    text-align: center;
+    position: relative;
+    padding: 10.958905380649rem 7.9701130041087rem;
+    transition: transform 3s;
+    background: linear-gradient(to bottom,#42378F,#42378F,#42378F,#011F49,#011F49);
+    transform-style: preserve-3d;
+}
+.mob-card-front, .mob-card-back{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0rem  1.9925282510272rem;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.mob-card-front{
+    background: linear-gradient(to bottom,#42378F,#42378F,#011F49,#011F49);
+}
+.card-title-agri{
+    color: #071716;
+    font-size:  1.9925282510272rem;
+    height: 16.875rem;
+    transform: translateZ( 1.9925282510272rem);
+    background-image: url(agriculture.jpg);
+    background-size: cover;
+    box-shadow: 0 0 1.25rem black ;
+    border-radius: 1.25rem;
+}
+.card-title-ed{
+    font-size:  1.9925282510272rem;
+    height: 16.875rem;
+    transform: translateZ(1.9925282510272rem);
+    background-image: url(edtech.jpg);
+    background-size: cover;
+    box-shadow: 0 0 1.25rem black ;
+    border-radius: 1.25rem;
+}
+.card-title-fin{
+    color: #19e3cf;
+    font-size: 1.9925282510272rem;
+    height: 16.875rem;
+    transform: translateZ(1.9925282510272rem);
+    background-image: url(fintech.jpg);
+    background-size: cover;
+    box-shadow: 0 0 1.25rem black ;
+    border-radius: 1.25rem;
+}
+.card-title-mob{
+    color: #19e3cf;
+    font-size: 1.9925282510272rem;
+    height: 16.875rem;
+    transform: translateZ(1.9925282510272rem);
+    background-image: url(mobility.jpg);
+    background-size: cover;
+    box-shadow: 0 0 1.25rem black ;
+    border-radius: 1.25rem;
+}
+.card-title-en{
+    color: white;
+    font-size: 1.9925282510272rem;
+    height: 16.875rem;
+    transform: translateZ(1.9925282510272rem);
+    background-image: url(energy.jpg);
+    background-size: cover;
+    box-shadow: 0 0 1.25rem black ;
+    border-radius: 1.25rem;
+}
+.card-title-op{
+    color: white;
+    font-size: 1.9925282510272rem;
+    height: 16.875rem;
+    transform: translateZ(1.9925282510272rem);
+    background-image: url(open\ innovation.jpg);
+    background-size: cover;
+    box-shadow: 0 0 1.25rem black ;
+    border-radius: 1.25rem;
+}
+.card-body{
+    transform: translateZ(2.5rem);
+    align-content: center;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 0.938rem;
+    padding-right: 0.938rem;
+    font-size: 0.74719809413519rem;
+    font-weight: 700;
+    margin-top: 1.563rem;
+    box-shadow: 0 0 1.25rem black;
+    box-sizing: 0.188rem solid black;
+    border-radius: 1.25rem;
+}
+.mob-card-back{
+    transform: rotateY(.5turn);
+    color: white;
+    background: linear-gradient(to bottom,#42378F,#42378F,#42378F,#011F49,#011F49);
+}
+.card-subtitle{
+    font-size: 0.75rem;
+    transform: translateY(14.375rem);
+    color: white;
+}
+.card-subtitle-op{
+    font-size: 0.75rem;
+    transform: translateY(11.875rem);
+    color: white;
+}
+.mob-track-title{
+    visibility: hidden;
+}
+/*---------------------------------------------------- tracks heading -----------------------------------------------------------------------*/
+#track-id{
+    margin: 0.625rem 34.375rem;
+    font-size: 6.25rem;
+    font-weight: 5000;
+    transform: translateY(3.125rem);
+    font-family: sans-serif;
+    background: -webkit-linear-gradient(left,#00FFF0,#00FFF0,#03C60B,#03C60B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/*----------------------------------------------- vectors behind the background ------------------------------------------------------------*/
+.left{
+    position: absolute;
+    float: left;
+    left: 0;
+    height: 75rem;
+    width: 10rem;
+    transform: translateX(-5rem);
+    margin-top: 0rem;
+    filter: blur(6.25rem);
+}
+.right{
+    position: relative;
+    float: right;
+    height: 75rem;
+    width: 10rem;
+    margin-top: 0rem;
+    filter: blur(5.625rem);
+}
+/* ---------------------------------------------------------- FOR 600PX -------------------------------------------------------------------- */
+@media only screen and (max-width: 37.5rem){
+    :root {
+        --level-one: translateZ(3rem);
+        --level-two: translateZ(6rem);
+        --level-three: translateZ(9rem);
+
+        --fw-normal: 400;
+        --fw-bold: 700;
+    }
+    #track-id{
+        display: none;
+    }
+    .vector{
+        display: none;
+    }
+    .mob-tracks{
+        display: contents;
+    }
+    .mob-track-title{
+        visibility: visible;
+        background: -webkit-linear-gradient(left,#00FFF0,#00FFF0,#03C60B,#03C60B);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 5.625rem;
+        font-weight: 5000;
+        transform: translate(0.313rem,-2.188rem);
+    }
+    *,*::before,*::after{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        
+    }
+    .card{
+        width: 19.375rem;
+        margin-top: 3.125rem;
+        margin-left: 0rem;
+    }
+    .all2{
+        margin-top: 0rem;
+    }
+    .mob-card{
+        text-align: center;
+        position: relative;
+        padding: 12rem 8rem;
+        transition: transform 3s;
+        transform-style: preserve-3d;
+    }
+    .mob-card-front , .mob-card-back{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding:1.9925282510272rem;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        display: grid;
+    }
+    .is-flipped{
+        transform: rotateY(.5turn);
+    }
+    .mob-card-front{
+        background: linear-gradient(to bottom,#42378F,#42378F,#42378F,#011F49,#011F49);
+        color: #000615;
+        border-radius: 0.313rem;
+    }
+    .mob-card-back::before{
+        content: '';
+        position: absolute;
+        top: 0.99626412551359rem;
+        bottom: 0.99626412551359rem;
+        left: 0.99626412551359rem;
+        right: 1rem;
+        border-radius: 0.313rem;
+        transform: var(--level-one);
+    }
+    .mob-card-front::before{
+        content: '';
+        position: absolute;
+        top: 0.99626412551359rem;
+        bottom: 0.99626412551359rem;
+        left: 0.99626412551359rem;
+        right: 1rem;
+        border-radius: 0.313rem;
+        transform: var(--level-one);
+    }
+    .mob-card-back{
+        font-size: 0.875rem;
+        transform: rotateY(.5turn);
+        background: linear-gradient(to bottom,#42378F,#42378F,#42378F,#42378F,#011F49,#011F49);
+        border-radius: 0.313rem;
+    } 
+    .card-title-agri{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 1.25rem black;
+        background-image:url(agriculture.jpg);
+        background-size: cover;
+        border-radius: 1.25rem;
+        color: black;
+        height: 20rem;
+    }
+    .card-body{
+        transform: translateZ(3rem);
+        align-content: center;
+        border-radius: 1.25rem;
+        font-size: 0.75rem;
+        padding-top: 1.25rem;
+        padding-left: 0.938rem;
+        padding-right: 0.938rem;
+        padding-bottom: 1.25rem;
+        font-weight: var(--fw-normal);
+        box-shadow: 0 0 0.938rem black;
+        text-shadow: 0 0 0.938rem black;
+        line-height: 1.6;
+        color: white;
+    }
+    .card-title-ed{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 1.25rem black;
+        background-image:url(edtech.jpg);
+        background-size: cover;
+        border-radius: 1.25rem;
+        color: black;
+        height: 20rem;
+    }
+    .card-title-fin{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 1.25rem black;
+        background-image:url(fintech.jpg);
+        background-size: cover;
+        border-radius: 1.25rem;
+        color: #19e3cf;
+        height: 20rem;
+    }
+    .card-title-mob{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 1.25rem black;
+        background-image:url(mobility.jpg);
+        background-size: cover;
+        border-radius: 1.25rem;
+        color: #19e3cf;
+        height: 20rem;
+    }
+    .card-title-en{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 1.25rem black;
+        background-image:url(energy.jpg);
+        background-size: cover;
+        border-radius: 1.25rem;
+        color: black;
+        height: 20rem;
+    }
+    .card-title-op{
+        font-size: 2.5rem;
+        transform: var(--level-two);
+        font-weight: var(--fw-bold);
+        box-shadow: 0 0 1.25rem black;
+        background-image:url(open\ innovation.jpg);
+        background-size: cover;
+        border-radius: 1.25rem;
+        color: white;
+        height: 20rem;
+    }
+    .card-subtitle{
+        font-size: 0.75rem;
+        transform: translateY(17.188rem);
+        color: white;
+    }
+    .card-subtitle-op{
+        font-size: 0.75rem;
+        transform: translateY(13.75rem);
+    }
+    .all, .all2{
+        display: block;
+    }
+    #card-op{
+        margin-bottom: 5rem;
+    }
+}
+/* --------------------------------------------------------- FOR 800PX --------------------------------------- */
+@media only screen and (max-width: 50rem){
+    .mob-track-title{
+        visibility: visible;
+        background: -webkit-linear-gradient(left,#00FFF0,#00FFF0,#03C60B,#03C60B);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 5.625rem;
+        font-weight: 5000;
+        transform: translate(0.313rem,-2.188rem);
+    }
+}
