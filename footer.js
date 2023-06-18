@@ -29,15 +29,6 @@ document.write(`
 <div>
     <footer>
       <hr clas="horizontal-line">
-      <div class="red-image">
-        <div class="blur-img1">
-          <img id="blur-img1" src="img/Red_blur.png" alt="blur-image" data-aos="fade-left" data-aos-duration="1000">
-        </div>
-
-        <div class="blur-img2">
-          <img id="blur-img2" src="img/Red_blur.png" alt="blur-image" data-aos="fade-right" data-aos-duration="1000">
-        </div>
-      </div>
       <div class="footer-section">
 
 

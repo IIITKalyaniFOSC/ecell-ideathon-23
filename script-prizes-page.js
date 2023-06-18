@@ -1,6 +1,9 @@
 // Prizes animation
 gsap.from(".prizes-heading", {
-    scrollTrigger: ".prizes-heading",
+    scrollTrigger: {
+    trigger: ".prizes-heading",
+    toggleActions: "restart none none reverse"
+  },
     duration: 1,
     opacity: 0,
     y: '2vw'
@@ -8,7 +11,10 @@ gsap.from(".prizes-heading", {
   
   // Boxes animation
   gsap.from(".first-box", {
-    scrollTrigger: ".first-box",
+    scrollTrigger: {
+    trigger: ".first-box",
+    toggleActions: "restart none none reverse"
+  },
     duration: 2,
     opacity: 0,
     ease: "back.out(10)",
@@ -16,7 +22,10 @@ gsap.from(".prizes-heading", {
   })
   
   gsap.from(".second-box", {
-    scrollTrigger: ".second-box",
+    scrollTrigger: {
+    trigger: ".second-box",
+    toggleActions: "restart none none reverse"
+  },
     duration: 2,
     opacity: 0,
     ease: "back.out(10)",
@@ -25,7 +34,10 @@ gsap.from(".prizes-heading", {
   })
   
   gsap.from(".third-box", {
-    scrollTrigger: ".third-box",
+    scrollTrigger: {
+    trigger: ".third-box",
+    toggleActions: "restart none none reverse"
+  },
     duration: 2,
     opacity: 0,
     ease: "back.out(10)",
@@ -34,7 +46,10 @@ gsap.from(".prizes-heading", {
   })
   
   gsap.from(".fourth-box", {
-    scrollTrigger: ".fourth-box",
+    scrollTrigger: {
+    trigger: ".fourth-box",
+    toggleActions: "restart none none reverse"
+  },
     duration: 2,
     opacity: 0,
     ease: "back.out(10)",
