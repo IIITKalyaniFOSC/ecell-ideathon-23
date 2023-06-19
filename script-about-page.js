@@ -24,6 +24,7 @@ spans.forEach(span => {
     scrollTrigger: {
       trigger: span,
       toggleActions: "restart none none reverse", // Restarts animation when the element enters the screen
+      start: "top 100%"
     },
     duration: 1,
     delay: delay,
@@ -37,7 +38,8 @@ spans.forEach(span => {
 gsap.from(".about-paragraph", {
   scrollTrigger: {
     trigger: ".about-paragraph",
-    toggleActions: "restart none none reverse"
+    toggleActions: "restart none none reverse",
+    start: "top 100%"
   },
   y: '10vh',
   opacity: 0,
