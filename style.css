@@ -30,6 +30,7 @@ body {
   border-radius: 500px;
   transform: translateX(-150px);
   animation: fadein-left 2s;
+  position: fixed;
 }
 .main-vector-right {
   height: 80vh;
@@ -42,6 +43,7 @@ body {
   border-radius: 500px;
   transform: translateX(150px);
   animation: fadein-right 2s;
+  position: fixed;
 }
 .mobile-vector-top {
   position: absolute;

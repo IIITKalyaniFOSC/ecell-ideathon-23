@@ -86,34 +86,6 @@ document.write(`
 			font-family: 'Grandstander';
 		}
 
-		.one {
-			height: 80vh;
-			width: 15vw;
-			position: absolute;
-			top: 10vh;
-			background-color: #70262688;
-			filter: blur(80px);
-			border-radius: 500px;
-			transform: translateX(-150px);
-			/* animation to fade it in from the left */
-			animation: fadein-left 2s;
-		}
-
-		.two {
-			height: 80vh;
-			width: 15vw;
-			position: absolute;
-			right: 0;
-			top: 10vh;
-			/* transform: translateX(750%); */
-			background-color: #70262688;
-			filter: blur(80px);
-			border-radius: 500px;
-			transform: translateX(150px);
-			animation: fadein-right 2s;
-			/* transform: rotate(180deg); */
-		}
-
 		/* fadein animation keyframes */
 		@keyframes fadein-left {
 			from {

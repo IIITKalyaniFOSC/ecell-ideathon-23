@@ -21,7 +21,11 @@ spans.forEach(span => {
 let delay = 0;
 spans.forEach(span => {
   gsap.to(span, {
-    scrollTrigger: span,
+    scrollTrigger: {
+      trigger: span,
+      toggleActions: "restart none none reverse", // Restarts animation when the element enters the screen
+      start: "top 100%"
+    },
     duration: 1,
     delay: delay,
     opacity: 1,
@@ -32,7 +36,11 @@ spans.forEach(span => {
 });
 
 gsap.from(".about-paragraph", {
-  scrollTrigger: ".about-paragraph",
+  scrollTrigger: {
+    trigger: ".about-paragraph",
+    toggleActions: "restart none none reverse",
+    start: "top 100%"
+  },
   y: '10vh',
   opacity: 0,
   duration: 1
@@ -62,6 +70,7 @@ twists.forEach((twist) => {
 
 // Gyroscope effect on phone
 const tiltingDivs = document.getElementsByClassName('interior-box');
+const MAX_ROTATION = 25;
 
 window.addEventListener('deviceorientation', handleOrientation);
 
@@ -69,9 +78,16 @@ function handleOrientation(event) {
   const { beta, gamma } = event;
 
   // const xRotation = beta ? beta / 2 * 3 : 0;
-  const yRotation = gamma ? gamma / 2 * 3: 0;
+  const yRotation = gamma ? gamma * 1.0 : 0;
+
+  const clampedRotation = clamp(yRotation, -MAX_ROTATION, MAX_ROTATION);
 
   for (let i = 0; i < tiltingDivs.length; i++) {
-    tiltingDivs[i].style.transform = `rotateY(${yRotation}deg)`;
+    tiltingDivs[i].style.transform = `rotateY(${clampedRotation}deg)`;
   }
 }
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
