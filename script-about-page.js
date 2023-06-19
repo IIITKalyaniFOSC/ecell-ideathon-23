@@ -78,7 +78,7 @@ function handleOrientation(event) {
   const { beta, gamma } = event;
 
   // const xRotation = beta ? beta / 2 * 3 : 0;
-  const yRotation = gamma ? gamma * 0.5 : 0;
+  const yRotation = gamma ? gamma * 1.0 : 0;
 
   const clampedRotation = clamp(yRotation, -MAX_ROTATION, MAX_ROTATION);
 
