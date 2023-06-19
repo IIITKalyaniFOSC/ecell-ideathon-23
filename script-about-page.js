@@ -70,7 +70,7 @@ twists.forEach((twist) => {
 
 // Gyroscope effect on phone
 const tiltingDivs = document.getElementsByClassName('interior-box');
-const MAX_ROTATION = 45; // Set the maximum rotation angle here
+const MAX_ROTATION = 20; // Set the maximum rotation angle here
 
 window.addEventListener('deviceorientation', handleOrientation);
 
