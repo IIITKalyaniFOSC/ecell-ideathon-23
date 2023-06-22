@@ -124,7 +124,7 @@ document.write(`
 				<h2 class="team-name" hidden>Bhaskar Metiya</h2>
 			</div>
 			<div class="col-md-4">
-				<img src="placeholder.png" alt="Image 2" class="team-image1" hidden>
+				<img src="img/Iman_Kalyan_Chakraborty_Image.jpg" alt="Image 2" class="team-image1" hidden>
 				<h2 class="team-name" hidden>Iman Kalyan Chakraborty</h2>
 			</div>
 			<div class="col-md-4">
