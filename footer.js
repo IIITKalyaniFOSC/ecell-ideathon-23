@@ -28,7 +28,7 @@ document.write(`
 <body>
 <div>
     <footer>
-      <hr clas="horizontal-line">
+      <hr clas="footer-horizontal-line">
       <div class="footer-section">
 
 
@@ -36,7 +36,7 @@ document.write(`
 
 
 
-          <p class="paragraph"> Envision is the entrepreneurship cell of Indian Institute of Information Technology of
+          <p class="footer-paragraph"> Envision is the entrepreneurship cell of Indian Institute of Information Technology of
             Kalyani.
           </p>
 
@@ -44,34 +44,34 @@ document.write(`
 
         <div class="footer-elements" data-aos="fade-up" data-aos-duration="1000">
 
-          <h4 class="heading">Envision</h4>
+          <h4 class="footer-heading">Envision</h4>
 
-          <ul class="unorder-list">
+          <ul class="footer-unorder-list">
 
-            <li><a href="#" class="link">Ecell</a></li>
+            <li><a href="#" class="footer-link">Ecell</a></li>
 
-            <li><a href="http://iiitkalyani.ac.in/" class="link"> IIIT Kalyani</a></li>
+            <li><a href="http://iiitkalyani.ac.in/" class="footer-link"> IIIT Kalyani</a></li>
 
 
-            <li><a href="mailto: iic@iiitkalyani.ac.in" class="link"><i class="fa fa-envelope"></i> Mail Us</a></li>
+            <li><a href="mailto: iic@iiitkalyani.ac.in" class="footer-link"><i class="fa fa-envelope"></i> Mail Us</a></li>
 
           </ul>
 
         </div>
         <div class="footer-elements" data-aos="fade-up" data-aos-duration="1000">
 
-          <h4 class="heading">Links</h4>
+          <h4 class="footer-heading">Links</h4>
 
-          <ul class="unorder-list">
+          <ul class="footer-unorder-list">
 
-            <li class="list"><a href="#home" class="link"></i> Home</a></li>
+            <li class="footer-list"><a href="#home" class="footer-link"></i> Home</a></li>
 
-            <li class="list"><a href="#about" class="link"></i> About</a></li>
+            <li class="footer-list"><a href="#about" class="footer-link"></i> About</a></li>
 
 
-            <li class="list"><a href="#track" class="link"></i> Track</a></li>
-            <li class="list"><a href="#timeline" class="link"></i> Timeline</a></li>
-            <li class="list"><a href="#track" class="link"></i> Team</a></li>
+            <li class="footer-list"><a href="#track" class="footer-link"></i> Track</a></li>
+            <li class="footer-list"><a href="#timeline" class="footer-link"></i> Timeline</a></li>
+            <li class="footer-list"><a href="#track" class="footer-link"></i> Team</a></li>
 
 
           </ul>
@@ -80,37 +80,37 @@ document.write(`
 
         <div class="footer-elements" data-aos="fade-up" data-aos-duration="1000">
 
-          <h4 class="heading">Connect with Us</h4>
+          <h4 class="footer-heading">Connect with Us</h4>
 
-          <ul class="social-icons">
-
-
+          <ul class="footer-social-icons">
 
 
 
-            <li class="list"><a href="https://www.linkedin.com/in/envision-iiit-kalyani-7b5194203" class="link"><i
-                  class="fa fa-linkedin"></i></a></li>
+
+
+            <li class="footer-list"><a href="https://www.linkedin.com/in/envision-iiit-kalyani-7b5194203" class="footer-link"><i
+                  class="fa fa-linkedin "></i></a></li>
 
 
 
-            <li class="list"><a href="https://instagram.com/ecell_iiitk" class="link"><i
+            <li class="footer-list"><a href="https://instagram.com/ecell_iiitk" class="footer-link"><i
                   class="fa fa-instagram"></i></a></li>
 
           </ul>
 
         </div>
         <div class="footer-elements">
-          <ul class="logo" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
-            <li class="list"><img src="img/ECellLogo1.png" class="logo"></li>
+          <ul class="footer-logo" data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
+            <li class="footer-list"><img src="img/ECellLogo.png" class="footer-logo"></li>
           </ul>
 
         </div>
 
       </div>
 
-      <hr class="horizontal-line">
+      <hr class="footer-horizontal1-line">
 
-      <p class="copyright">E-Cell | @ 2023 IIIT Kalyani- All Rights Reserved</p>
+      <p class="footer-copyright">E-Cell | @ 2023 IIIT Kalyani- All Rights Reserved</p>
 
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
