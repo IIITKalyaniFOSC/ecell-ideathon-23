@@ -55,11 +55,11 @@
   }
   .footer-heading {
     margin-bottom: 0.9375rem;
-    font-size: 1.8rem;
+    font-size: 2.2vh;
     color:#f0f5f1
   }
   .footer-paragraph{
-    font-size: 2rem;
+    font-size: 3vh;
     
     color: #fff;
   }
@@ -75,7 +75,7 @@
   } 
   .footer-link{
     color: #f0f5f1;
-    font-size: 2rem;
+    font-size: 3vh;
     
   }
   .footer-link:hover {
@@ -90,10 +90,7 @@
   .footer-social-icons i {
     color: white; 
   }
-  .footer-logo{
-    width:10%;
-    height: 25%;
-  }
+  
   .footer-social-icons li {
     margin-bottom: 0rem;
     width:2.5rem;
@@ -116,8 +113,8 @@
   }
   .footer-logo{
     margin-right: 10rem;
-    width:18rem;
-    height: 18rem;
+    width:80%;
+    height: 60%;
   }
 
   /* Responsive adjustments */
@@ -262,7 +259,7 @@
     
   }
 
-  @media screen and (min-width: 320px) and (max-width: 480px) {
+  /* @media screen and (min-width: 320px) and (max-width: 480px) {
 
     footer {
       background: #000615;
@@ -329,7 +326,7 @@
       
     }
     
-  }
+  } */
  @media  screen and (min-width: 768px) and (max-width: 1024px) {
 
     footer {
@@ -348,6 +345,82 @@
      height: max-content;
       width:30rem;
       margin-left: 12rem;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+    .footer-red-image{
+      visibility: hidden;
+    }
+    .footer-section {
+      display: block;
+      flex-wrap: wrap;
+      height: 45.125rem;
+    }
+    .footer-heading {
+      font-size: 2rem;
+      margin-top:2rem;
+    }
+    .footer-paragraph{
+      font-size: 2rem;
+      text-align:start;
+      padding: 0.938rem;
+      margin-left: 3rem;
+    
+    }
+    .footer-link {
+      font-size: 2rem;
+      width:20rem;
+      transform:translateX(10rem);
+      
+    }
+    .footer-social-icons li a {
+      width: 2rem;
+      height: 2rem;
+      transform: translate(-2.5rem,5.375rem);
+    }
+    .footer-logo{
+      width: 13rem;
+      margin-left:3.5rem;
+      margin-top:2rem;
+            
+    }
+    .footer-horizontal-line{
+      margin-top: 1.5rem;
+      width:100%;
+    }
+    .footer-horizontal1-line{
+      margin-top: 32.5rem;
+      width: 100%;
+    }
+    .footer-copyright {
+      text-align: center;
+      color: #fff;
+      padding: 1rem ;
+      margin-left: 5rem;
+      
+    }
+    
+  }
+
+  @media  screen and (min-width: 1024px) and (max-width: 1280px) {
+
+    footer {
+      background: #000615;
+       max-width: 100%;
+      height: 85rem;
+       margin-left: auto;
+       margin-right: auto;
+       margin-top: 4rem;
+       
+       background-size: cover;
+     }
+
+    .footer-elements {
+      margin: 1rem ;
+     height: max-content;
+      width:30rem;
+      margin-left: 25rem;
       padding: 0;
       display: flex;
       justify-content: space-around;
